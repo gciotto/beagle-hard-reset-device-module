@@ -19,7 +19,7 @@ static int __init beagle_hard_reset_init(void) {
 		return -ENODEV;
 	}
 
-	if (gpio_request(GPIO_ID, "hard_reset")) {
+	if (gpio_request(GPIO_ID, "sysfs")) {
 		printk(KERN_INFO "gpio_request() failed!\n");
 		return -ENODEV;
 	}
